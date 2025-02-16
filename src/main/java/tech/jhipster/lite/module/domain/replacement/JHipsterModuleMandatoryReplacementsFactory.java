@@ -4,7 +4,9 @@ import java.util.stream.Stream;
 import tech.jhipster.lite.module.domain.JHipsterModule.JHipsterModuleBuilder;
 import tech.jhipster.lite.module.domain.JHipsterProjectFilePath;
 
-public final class JHipsterModuleMandatoryReplacementsFactory extends JHipsterModuleReplacementsFactory {
+public final class JHipsterModuleMandatoryReplacementsFactory
+  extends JHipsterModuleReplacementsFactory
+  implements JHipsterModuleReplacementFactoryInterface {
 
   private JHipsterModuleMandatoryReplacementsFactory(JHipsterModuleMandatoryReplacementsFactoryBuilder builder) {
     super(builder);
@@ -14,6 +16,7 @@ public final class JHipsterModuleMandatoryReplacementsFactory extends JHipsterMo
     return new JHipsterModuleMandatoryReplacementsFactoryBuilder(module);
   }
 
+  @Override
   public Stream<ContentReplacer> replacers() {
     return getReplacers().stream();
   }
