@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.properties;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.InfrastructureError;
 
-enum PropertiesErrorKey implements ErrorKey {
+enum PropertiesErrorKey implements InfrastructureError {
   INVALID_BASE_NAME("invalid-project-base-name"),
   INVALID_PROPERTY_TYPE("invalid-property-type"),
   UNKNOWN_PROPERTY("unknown-property");

@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary.npm;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.MiscellaneousError2;
 
-enum NpmErrorKey implements ErrorKey {
+enum NpmErrorKey implements MiscellaneousError2 {
   INSTALL_ERROR("install-error");
 
   private final String key;

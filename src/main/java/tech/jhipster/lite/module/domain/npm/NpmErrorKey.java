@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.npm;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.MiscellaneousError2;
 
-enum NpmErrorKey implements ErrorKey {
+enum NpmErrorKey implements MiscellaneousError2 {
   UNKNOWN_PACKAGE("unknown-npm-package");
 
   private final String key;

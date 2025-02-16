@@ -1,8 +1,8 @@
 package tech.jhipster.lite.project.infrastructure.secondary;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.ProjectError;
 
-enum ProjectErrorKey implements ErrorKey {
+enum ProjectErrorKey implements ProjectError {
   FORMATTING_ERROR("project-formatting-error"),
   ZIPPING_ERROR("project-zipping-error");
 

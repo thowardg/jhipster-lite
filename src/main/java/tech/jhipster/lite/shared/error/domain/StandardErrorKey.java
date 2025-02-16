@@ -1,6 +1,6 @@
 package tech.jhipster.lite.shared.error.domain;
 
-public enum StandardErrorKey implements ErrorKey {
+public enum StandardErrorKey implements GeneralError {
   BAD_REQUEST("bad-request"),
   INTERNAL_SERVER_ERROR("internal-server-error");
 

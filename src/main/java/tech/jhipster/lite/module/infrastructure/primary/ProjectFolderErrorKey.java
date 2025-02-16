@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.primary;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.ProjectError;
 
-enum ProjectFolderErrorKey implements ErrorKey {
+enum ProjectFolderErrorKey implements ProjectError {
   INVALID_FOLDER("invalid-project-folder");
 
   private final String key;

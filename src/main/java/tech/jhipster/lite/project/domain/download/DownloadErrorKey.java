@@ -1,8 +1,8 @@
 package tech.jhipster.lite.project.domain.download;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.GeneralError;
 
-enum DownloadErrorKey implements ErrorKey {
+enum DownloadErrorKey implements GeneralError {
   INVALID_DOWNLOAD("invalid-download-folder");
 
   private final String key;

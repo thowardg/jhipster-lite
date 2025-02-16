@@ -1,8 +1,8 @@
 package tech.jhipster.lite.shared.enumeration.domain;
 
-import tech.jhipster.lite.shared.error.domain.ErrorKey;
+import tech.jhipster.lite.shared.error.domain.GeneralError;
 
-enum EnumsErrorKey implements ErrorKey {
+enum EnumsErrorKey implements GeneralError {
   UNMAPPABLE_ENUM("unmappable-enum");
 
   private final String key;
