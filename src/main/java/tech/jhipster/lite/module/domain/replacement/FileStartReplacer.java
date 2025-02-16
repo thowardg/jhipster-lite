@@ -2,7 +2,7 @@ package tech.jhipster.lite.module.domain.replacement;
 
 import java.util.function.BiFunction;
 
-public record FileStartReplacer(ReplacementCondition condition) implements ElementReplacer {
+public record FileStartReplacer(ReplacementCondition condition) implements FileReplacerAbstract {
   @Override
   public boolean notMatchIn(String content) {
     return false;

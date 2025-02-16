@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import tech.jhipster.lite.module.domain.JHipsterModule;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public record RegexNeedleBeforeReplacer(ReplacementCondition condition, Pattern pattern) implements ElementReplacer {
+public record RegexNeedleBeforeReplacer(ReplacementCondition condition, Pattern pattern) implements RegexPrePostAbstract {
   public RegexNeedleBeforeReplacer {
     Assert.notNull("condition", condition);
     Assert.notNull("pattern", pattern);

@@ -4,7 +4,7 @@ import java.util.function.BiFunction;
 import tech.jhipster.lite.module.domain.JHipsterModule;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public record TextNeedleAfterReplacer(ReplacementCondition condition, String text) implements ElementReplacer {
+public record TextNeedleAfterReplacer(ReplacementCondition condition, String text) implements TextReplacerAbstract {
   public TextNeedleAfterReplacer {
     Assert.notNull("condition", condition);
     Assert.notBlank("text", text);
