@@ -90,6 +90,7 @@ import tech.jhipster.lite.module.domain.replacement.JHipsterModuleMandatoryRepla
 import tech.jhipster.lite.module.domain.replacement.JHipsterModuleMandatoryReplacementsFactory.JHipsterModuleMandatoryReplacementsFactoryBuilder;
 import tech.jhipster.lite.module.domain.replacement.JHipsterModuleOptionalReplacementsFactory;
 import tech.jhipster.lite.module.domain.replacement.JHipsterModuleOptionalReplacementsFactory.JHipsterModuleOptionalReplacementsFactoryBuilder;
+import tech.jhipster.lite.module.domain.replacement.JHipsterModuleReplacementFactoryInterface;
 import tech.jhipster.lite.module.domain.replacement.RegexNeedleAfterReplacer;
 import tech.jhipster.lite.module.domain.replacement.RegexNeedleBeforeReplacer;
 import tech.jhipster.lite.module.domain.replacement.RegexReplacer;
@@ -109,7 +110,7 @@ public final class JHipsterModule {
 
   private final JHipsterModuleProperties properties;
   private final JHipsterModuleFiles files;
-  private final JHipsterModuleMandatoryReplacementsFactory mandatoryReplacements;
+  private final JHipsterModuleReplacementFactoryInterface mandatoryReplacements;
   private final JHipsterModuleOptionalReplacementsFactory optionalReplacements;
   private final JHipsterModuleStartupCommands startupCommands;
   private final JHipsterModuleContext context;
@@ -459,7 +460,7 @@ public final class JHipsterModule {
     return files.filesToDelete();
   }
 
-  public JHipsterModuleMandatoryReplacementsFactory mandatoryReplacements() {
+  public JHipsterModuleReplacementFactoryInterface mandatoryReplacements() {
     return mandatoryReplacements;
   }
 
