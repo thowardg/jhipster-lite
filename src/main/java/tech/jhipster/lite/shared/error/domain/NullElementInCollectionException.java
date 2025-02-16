@@ -1,6 +1,6 @@
 package tech.jhipster.lite.shared.error.domain;
 
-public class NullElementInCollectionException extends AssertionException {
+public class NullElementInCollectionException extends ElementException {
 
   public NullElementInCollectionException(String field) {
     super(field, message(field));

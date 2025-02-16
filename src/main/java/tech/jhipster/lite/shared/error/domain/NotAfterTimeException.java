@@ -2,42 +2,32 @@ package tech.jhipster.lite.shared.error.domain;
 
 import java.time.Instant;
 
-public final class NotAfterTimeException extends AssertionException {
+public final class NotAfterTimeException extends TimeException {
 
-  private NotAfterTimeException(String field, String message) {
-    super(field, message);
+  private NotAfterTimeException(String field, Instant value, String hint, Instant other) {
+    super(field, value, hint, other);
   }
 
   public static NotAfterTimeExceptionBuilder field(String fieldName, Instant value) {
     return new NotAfterTimeExceptionBuilder(fieldName, value);
   }
 
-  public record NotAfterTimeExceptionBuilder(String fieldName, Instant value) {
+  public static class NotAfterTimeExceptionBuilder {
+
+    private final String fieldName;
+    private final Instant value;
+
+    public NotAfterTimeExceptionBuilder(String fieldName, Instant value) {
+      this.fieldName = fieldName;
+      this.value = value;
+    }
+
     public NotAfterTimeException strictlyNotAfter(Instant other) {
-      return build("must be strictly after", other);
+      return new NotAfterTimeException(fieldName, value, "must be strictly after", other);
     }
 
     public NotAfterTimeException notAfter(Instant other) {
-      return build("must be after", other);
-    }
-
-    private NotAfterTimeException build(String hint, Instant other) {
-      return new NotAfterTimeException(fieldName, message(fieldName, value, hint, other));
-    }
-
-    private static String message(String fieldName, Instant actual, String hint, Instant other) {
-      return new StringBuilder()
-        .append("Time in \"")
-        .append(fieldName)
-        .append("\" ")
-        .append("having value : ")
-        .append(actual)
-        .append(' ')
-        .append(hint)
-        .append(" ")
-        .append(other)
-        .append(" but wasn't")
-        .toString();
+      return new NotAfterTimeException(fieldName, value, "must be after", other);
     }
   }
 

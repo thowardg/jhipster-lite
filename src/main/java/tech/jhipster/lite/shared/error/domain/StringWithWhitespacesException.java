@@ -1,13 +1,13 @@
 package tech.jhipster.lite.shared.error.domain;
 
-public class StringWithWhitespacesException extends AssertionException {
+public final class StringWithWhitespacesException extends StringException {
 
   public StringWithWhitespacesException(String field) {
     super(field, message(field));
   }
 
   private static String message(String field) {
-    return "The field \"%s\" contains at least one space".formatted(field);
+    return "The field \"" + field + "\" contains at least one space";
   }
 
   @Override

@@ -2,15 +2,15 @@ package tech.jhipster.lite.shared.error.domain;
 
 import java.util.Map;
 
-public final class StringTooShortException extends AssertionException {
+public final class StringTooShortException extends StringException {
 
   private final String minLength;
   private final String currentLength;
 
   private StringTooShortException(StringTooShortExceptionBuilder builder) {
     super(builder.field, builder.message());
-    minLength = String.valueOf(builder.minLength);
-    currentLength = String.valueOf(builder.value.length());
+    this.minLength = String.valueOf(builder.minLength);
+    this.currentLength = String.valueOf(builder.value.length());
   }
 
   public static StringTooShortExceptionBuilder builder() {
@@ -25,33 +25,23 @@ public final class StringTooShortException extends AssertionException {
 
     private StringTooShortExceptionBuilder() {}
 
-    StringTooShortExceptionBuilder field(String field) {
+    public StringTooShortExceptionBuilder field(String field) {
       this.field = field;
-
       return this;
     }
 
-    StringTooShortExceptionBuilder value(String value) {
+    public StringTooShortExceptionBuilder value(String value) {
       this.value = value;
-
       return this;
     }
 
-    StringTooShortExceptionBuilder minLength(int minLength) {
+    public StringTooShortExceptionBuilder minLength(int minLength) {
       this.minLength = minLength;
-
       return this;
     }
 
     private String message() {
-      return new StringBuilder()
-        .append("The value in field \"")
-        .append(field)
-        .append("\" must be at least ")
-        .append(minLength)
-        .append(" long but was only ")
-        .append(value.length())
-        .toString();
+      return "The value in field \"" + field + "\" must be at least " + minLength + " long but was only " + value.length();
     }
 
     public StringTooShortException build() {

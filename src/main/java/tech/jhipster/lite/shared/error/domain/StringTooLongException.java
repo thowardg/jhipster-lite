@@ -2,15 +2,15 @@ package tech.jhipster.lite.shared.error.domain;
 
 import java.util.Map;
 
-public final class StringTooLongException extends AssertionException {
+public final class StringTooLongException extends StringException {
 
   private final String maxLength;
   private final String currentLength;
 
   private StringTooLongException(StringTooLongExceptionBuilder builder) {
     super(builder.field, builder.message());
-    maxLength = String.valueOf(builder.maxLength);
-    currentLength = String.valueOf(builder.value.length());
+    this.maxLength = String.valueOf(builder.maxLength);
+    this.currentLength = String.valueOf(builder.value.length());
   }
 
   public static StringTooLongExceptionBuilder builder() {
@@ -25,33 +25,23 @@ public final class StringTooLongException extends AssertionException {
 
     private StringTooLongExceptionBuilder() {}
 
-    StringTooLongExceptionBuilder field(String field) {
+    public StringTooLongExceptionBuilder field(String field) {
       this.field = field;
-
       return this;
     }
 
-    StringTooLongExceptionBuilder value(String value) {
+    public StringTooLongExceptionBuilder value(String value) {
       this.value = value;
-
       return this;
     }
 
-    StringTooLongExceptionBuilder maxLength(int maxLength) {
+    public StringTooLongExceptionBuilder maxLength(int maxLength) {
       this.maxLength = maxLength;
-
       return this;
     }
 
     private String message() {
-      return new StringBuilder()
-        .append("The value in field \"")
-        .append(field)
-        .append("\" must be at most ")
-        .append(maxLength)
-        .append(" long but was ")
-        .append(value.length())
-        .toString();
+      return "The value in field \"" + field + "\" must be at most " + maxLength + " long but was " + value.length();
     }
 
     public StringTooLongException build() {

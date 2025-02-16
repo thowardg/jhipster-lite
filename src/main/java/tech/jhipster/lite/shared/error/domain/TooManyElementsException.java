@@ -2,15 +2,15 @@ package tech.jhipster.lite.shared.error.domain;
 
 import java.util.Map;
 
-public class TooManyElementsException extends AssertionException {
+public class TooManyElementsException extends ElementException {
 
   private final String maxSize;
   private final String currentSize;
 
   public TooManyElementsException(TooManyElementsExceptionBuilder builder) {
     super(builder.field, builder.message());
-    maxSize = String.valueOf(builder.maxSize);
-    currentSize = String.valueOf(builder.size);
+    this.maxSize = String.valueOf(builder.maxSize);
+    this.currentSize = String.valueOf(builder.size);
   }
 
   public static TooManyElementsExceptionBuilder builder() {
@@ -25,19 +25,16 @@ public class TooManyElementsException extends AssertionException {
 
     public TooManyElementsExceptionBuilder field(String field) {
       this.field = field;
-
       return this;
     }
 
     public TooManyElementsExceptionBuilder maxSize(int maxSize) {
       this.maxSize = maxSize;
-
       return this;
     }
 
     public TooManyElementsExceptionBuilder size(int size) {
       this.size = size;
-
       return this;
     }
 
