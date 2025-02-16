@@ -2,7 +2,7 @@ package tech.jhipster.lite.module.domain.javabuild.command;
 
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public record AddGradleTasksTestInstruction(String instruction) implements JavaBuildCommand {
+public record AddGradleTasksTestInstruction(String instruction) implements GradleBuildCommand {
   public AddGradleTasksTestInstruction {
     Assert.notNull("instruction", instruction);
   }

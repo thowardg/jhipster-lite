@@ -7,7 +7,7 @@ import tech.jhipster.lite.module.domain.javadependency.JavaDependencyVersion;
 import tech.jhipster.lite.module.domain.mavenplugin.MavenPlugin;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public final class AddDirectMavenPlugin implements JavaBuildCommand, AddMavenPlugin {
+public final class AddDirectMavenPlugin implements MavenBuildCommand, AddMavenPlugin {
 
   private final MavenPlugin plugin;
   private final Optional<JavaDependencyVersion> pluginVersion;

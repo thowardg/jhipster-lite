@@ -11,7 +11,7 @@ import tech.jhipster.lite.module.domain.mavenplugin.MavenPlugin;
 import tech.jhipster.lite.shared.error.domain.Assert;
 import tech.jhipster.lite.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
-public final class AddMavenPluginManagement implements JavaBuildCommand, AddMavenPlugin {
+public final class AddMavenPluginManagement implements MavenBuildCommand, AddMavenPlugin {
 
   private final MavenPlugin plugin;
   private final Optional<JavaDependencyVersion> pluginVersion;

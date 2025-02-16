@@ -6,7 +6,7 @@ import tech.jhipster.lite.module.domain.javabuildprofile.BuildProfileId;
 import tech.jhipster.lite.module.domain.javadependency.JavaDependencyVersion;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public final class AddGradlePlugin implements JavaBuildCommand {
+public final class AddGradlePlugin implements GradleBuildCommand {
 
   private final GradlePlugin plugin;
   private final Optional<JavaDependencyVersion> pluginVersion;

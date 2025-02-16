@@ -2,7 +2,7 @@ package tech.jhipster.lite.module.domain.javabuild.command;
 
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public record AddGradleConfiguration(String configuration) implements JavaBuildCommand {
+public record AddGradleConfiguration(String configuration) implements GradleBuildCommand {
   public AddGradleConfiguration {
     Assert.notNull("configuration", configuration);
   }

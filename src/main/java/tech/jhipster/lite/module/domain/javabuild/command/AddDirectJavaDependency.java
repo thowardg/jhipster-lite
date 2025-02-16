@@ -6,7 +6,7 @@ import tech.jhipster.lite.module.domain.javadependency.JavaDependency;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
 public record AddDirectJavaDependency(JavaDependency dependency, Optional<BuildProfileId> buildProfile)
-  implements JavaBuildCommand, AddJavaDependency {
+  implements JavaDependencyManagementCommand, AddJavaDependency {
   public AddDirectJavaDependency {
     Assert.notNull("dependency", dependency);
     Assert.notNull("buildProfile", buildProfile);

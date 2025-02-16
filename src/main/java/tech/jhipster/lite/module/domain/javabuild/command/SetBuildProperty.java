@@ -5,7 +5,7 @@ import tech.jhipster.lite.module.domain.buildproperties.BuildProperty;
 import tech.jhipster.lite.module.domain.javabuildprofile.BuildProfileId;
 import tech.jhipster.lite.shared.error.domain.Assert;
 
-public record SetBuildProperty(BuildProperty property, Optional<BuildProfileId> buildProfile) implements JavaBuildCommand {
+public record SetBuildProperty(BuildProperty property, Optional<BuildProfileId> buildProfile) implements GeneralCommandInterface {
   public SetBuildProperty {
     Assert.notNull("property", property);
     Assert.notNull("buildProfile", buildProfile);
