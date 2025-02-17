@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary.git;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.GitException;
 
-class GitCommitException extends GeneratorException {
+class GitCommitException extends GitException {
 
   public GitCommitException(String message, Throwable cause) {
     super(internalServerError(GitErrorKey.COMMIT_ERROR).message(message).cause(cause));

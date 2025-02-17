@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary.javadependency.gradle;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.GradleJavaExceptions;
 
-class InvalidTomlVersionCatalogException extends GeneratorException {
+class InvalidTomlVersionCatalogException extends GradleJavaExceptions {
 
   public InvalidTomlVersionCatalogException(Throwable cause) {
     super(

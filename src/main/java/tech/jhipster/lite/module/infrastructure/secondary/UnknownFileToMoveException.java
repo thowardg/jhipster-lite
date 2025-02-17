@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.GitException;
 
-class UnknownFileToMoveException extends GeneratorException {
+class UnknownFileToMoveException extends GitException {
 
   public UnknownFileToMoveException(String filename) {
     super(badRequest(ModuleSecondaryErrorKey.UNKNOWN_FILE_TO_MOVE).message(buildMessage(filename)).addParameter("file", filename));

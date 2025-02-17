@@ -1,9 +1,9 @@
 package tech.jhipster.lite.module.infrastructure.secondary;
 
 import tech.jhipster.lite.module.domain.properties.JHipsterProjectFolder;
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.DockerNPMException;
 
-class MissingPackageJsonException extends GeneratorException {
+class MissingPackageJsonException extends DockerNPMException {
 
   public MissingPackageJsonException(JHipsterProjectFolder folder) {
     super(badRequest(ModuleSecondaryErrorKey.MISSING_PACKAGE_JSON).message(buildMessage(folder)).addParameter("folder", folder.get()));

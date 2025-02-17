@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.resource;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ResourceSlugException;
 
-class InvalidJHipsterModuleTagException extends GeneratorException {
+class InvalidJHipsterModuleTagException extends ResourceSlugException {
 
   public InvalidJHipsterModuleTagException(String tag) {
     super(internalServerError(ResourceErrorKey.INVALID_TAG).message(buildMessage(tag)).addParameter("tag", tag));

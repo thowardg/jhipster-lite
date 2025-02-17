@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.docker;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.DockerNPMException;
 
-public class UnknownDockerImageException extends GeneratorException {
+public class UnknownDockerImageException extends DockerNPMException {
 
   public UnknownDockerImageException(DockerImageName imageName) {
     super(

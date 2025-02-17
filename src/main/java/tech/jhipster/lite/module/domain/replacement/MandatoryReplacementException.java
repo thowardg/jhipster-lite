@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.replacement;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.PropertyException;
 
-public class MandatoryReplacementException extends GeneratorException {
+public class MandatoryReplacementException extends PropertyException {
 
   public MandatoryReplacementException(Throwable cause) {
     super(

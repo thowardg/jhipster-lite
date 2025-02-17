@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary.javadependency.maven;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.JavaException;
 
-class MalformedAdditionalInformationException extends GeneratorException {
+class MalformedAdditionalInformationException extends JavaException {
 
   public MalformedAdditionalInformationException(Throwable cause) {
     super(

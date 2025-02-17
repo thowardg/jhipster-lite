@@ -3,9 +3,9 @@ package tech.jhipster.lite.module.domain.landscape;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import tech.jhipster.lite.module.domain.JHipsterSlug;
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ReplacementException;
 
-final class InvalidLandscapeException extends GeneratorException {
+final class InvalidLandscapeException extends ReplacementException {
 
   private InvalidLandscapeException(GeneratorExceptionBuilder builder) {
     super(builder);

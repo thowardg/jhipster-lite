@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.properties;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.PropertyException;
 
-final class InvalidPropertyTypeException extends GeneratorException {
+final class InvalidPropertyTypeException extends PropertyException {
 
   private InvalidPropertyTypeException(InvalidPropertyTypeExceptionBuilder builder) {
     super(

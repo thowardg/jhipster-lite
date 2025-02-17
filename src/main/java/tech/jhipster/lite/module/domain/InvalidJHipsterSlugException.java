@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ResourceSlugException;
 
-class InvalidJHipsterSlugException extends GeneratorException {
+class InvalidJHipsterSlugException extends ResourceSlugException {
 
   public InvalidJHipsterSlugException(String slug) {
     super(internalServerError(ModuleErrorKey.INVALID_SLUG).message(buildMessage(slug)).addParameter("slug", slug));

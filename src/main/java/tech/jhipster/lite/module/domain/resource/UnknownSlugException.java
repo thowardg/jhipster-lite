@@ -1,9 +1,9 @@
 package tech.jhipster.lite.module.domain.resource;
 
 import tech.jhipster.lite.module.domain.JHipsterModuleSlug;
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ResourceSlugException;
 
-class UnknownSlugException extends GeneratorException {
+class UnknownSlugException extends ResourceSlugException {
 
   public UnknownSlugException(JHipsterModuleSlug slug) {
     super(internalServerError(ResourceErrorKey.UNKNOWN_SLUG).message(buildMessage(slug)).addParameter("slug", slug.get()));

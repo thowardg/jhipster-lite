@@ -1,8 +1,8 @@
 package tech.jhipster.lite.project.infrastructure.secondary;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ProjectException;
 
-class ProjectZippingException extends GeneratorException {
+class ProjectZippingException extends ProjectException {
 
   public ProjectZippingException(String message) {
     super(internalServerError(ProjectErrorKey.ZIPPING_ERROR).message(message));

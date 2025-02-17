@@ -1,9 +1,9 @@
 package tech.jhipster.lite.module.domain.javadependency;
 
 import tech.jhipster.lite.module.domain.javabuild.VersionSlug;
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.GradleJavaExceptions;
 
-class UnknownJavaVersionSlugException extends GeneratorException {
+class UnknownJavaVersionSlugException extends GradleJavaExceptions {
 
   public UnknownJavaVersionSlugException(VersionSlug slug) {
     super(

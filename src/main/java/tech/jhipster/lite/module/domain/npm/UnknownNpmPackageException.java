@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.npm;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.DockerNPMException;
 
-public class UnknownNpmPackageException extends GeneratorException {
+public class UnknownNpmPackageException extends DockerNPMException {
 
   public UnknownNpmPackageException(NpmPackageName packageName, NpmVersionSource source) {
     super(

@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.infrastructure.secondary.javadependency.maven;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.JavaException;
 
-class InvalidPomException extends GeneratorException {
+class InvalidPomException extends JavaException {
 
   public InvalidPomException() {
     super(

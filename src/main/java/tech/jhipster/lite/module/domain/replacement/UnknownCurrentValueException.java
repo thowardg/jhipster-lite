@@ -1,8 +1,8 @@
 package tech.jhipster.lite.module.domain.replacement;
 
-import tech.jhipster.lite.shared.error.domain.GeneratorException;
+import tech.jhipster.lite.shared.error.domain.ReplacementException;
 
-class UnknownCurrentValueException extends GeneratorException {
+class UnknownCurrentValueException extends ReplacementException {
 
   public UnknownCurrentValueException(String currentValue, String content) {
     super(badRequest(ReplacementErrorKey.UNKNOWN_CURRENT_VALUE).message(buildMessage(currentValue, content)));
