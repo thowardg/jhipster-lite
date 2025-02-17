@@ -3,7 +3,7 @@ package tech.jhipster.lite.shared.error.domain;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public final class NotMatchingExpectedPatternException extends AssertionException {
+public final class NotMatchingExpectedPatternException extends StringException {
 
   private final String pattern;
 
